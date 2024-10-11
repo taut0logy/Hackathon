@@ -37,8 +37,7 @@ jobs:
         with:
           host: ${{ secrets.CLOUD_SERVER_IP }}
           username: ${{ secrets.CLOUD_SERVER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          password: ${{ secrets.CLOUD_SERVER_PASSWORD }}
           script: |
             docker pull taut0logy/raufun:latest
             docker stop raufun || true
